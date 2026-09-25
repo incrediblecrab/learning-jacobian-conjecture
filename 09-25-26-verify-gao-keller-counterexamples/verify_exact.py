@@ -537,8 +537,10 @@ def extras_F(B, rep, tex):
     h1 = H[0].as_expr(*symbols("z y x v1 v2 v3"))
     rep.check("F", "Thm 3.4: h_1 = c_3 x^3 + (4 - 3 v2 v3) x - 2 v3 and a_2 = dc_3/dv_1",
               sympy.expand(h1 - (c3 * xs**3 + (4 - 3 * v2 * v3) * xs - 2 * v3)) == 0 and sympy.expand(sympy.diff(c3, v1) - a2) == 0)
-    rep.check("F", "Thm 3.4(1): disc_x(h_1) = -c_3 a_2^2 and a_2^2 - 4(4 - 3 v2 v3)^3 = 108 v3^2 c_3",
+    rep.check("F", "Thm 3.4(1): disc_x(h_1) = -c_3 a_2^2, the standard discriminant; without the division by lc(h_1) = c_3, "
+                   "-Res_x(h_1, dh_1/dx) = -c_3^2 a_2^2; and a_2^2 - 4(4 - 3 v2 v3)^3 = 108 v3^2 c_3",
               sympy.expand(sympy.discriminant(h1, xs) + c3 * a2**2) == 0
+              and sympy.expand(sympy.resultant(h1, sympy.diff(h1, xs), xs) - c3**2 * a2**2) == 0
               and sympy.expand(a2**2 - 4 * (4 - 3 * v2 * v3)**3 - 108 * v3**2 * c3) == 0)
     rep.check("F", "Thm 3.4(2): v3^2 c_3 = E(sigma(v))", sympy.expand(v3**2 * c3 - Ecur.subs({X: sig[0], Y: sig[1]})) == 0)
     img = [z, y, x] + list(f)
@@ -562,9 +564,10 @@ def extras_G(B, rep):
     res_wd = sympy.cancel(sympy.expand(sympy.resultant(Wq, sympy.diff(Wq, w), w)) / Ec)
     rep.check("G", "App. A.2: standard disc_w(W) = -E/16 and Res_w(W, dW/dw) = -E/64 (lc(W) = 1/4)",
               disc_std == Rational(-1, 16) and res_wd == Rational(-1, 64), "disc/E = %s, Res(W,W')/E = %s" % (disc_std, res_wd))
-    rep.note("G", "App. A.2 prints disc_w(W) = -E/64. With the standard discriminant, the convention of the paper's own "
-                  "disc_w(w^3-2w^2+Xw-2Y) = -4E, it is -E/16; -E/64 is Res_w(W, dW/dw), i.e. no division by lc(W) = 1/4. "
-                  "The zero locus E = 0, which is what the argument uses, is unaffected.")
+    rep.note("G", "App. A.2 prints disc_w(W) = -E/64; the standard discriminant gives -E/16, and -E/64 is Res_w(W, dW/dw), "
+                  "i.e. no division by lc(W) = 1/4. The paper's own convention is the standard (-1)^(n(n-1)/2) Res(f, f')/lc(f): "
+                  "its Thm 3.4(1) disc_x(h_1) = -c_3 a_2^2, checked under F, is the standard value, and without the division by "
+                  "lc(h_1) = c_3 it would be -c_3^2 a_2^2. The zero locus E = 0, which is what the argument uses, is unaffected.")
     nX, nY = (Rational(s) for s in recipes.G_APPENDIX["node"])
     rep.check("G", "App. A.2: at the node (X,Y) = (-4, 1/2), W = (w^2 - 4w - 2)^2 / 4",
               sympy.expand(Wq.subs({X: nX, Y: nY}) - sympy.sympify(recipes.G_APPENDIX["node_square"], locals=loc)) == 0)

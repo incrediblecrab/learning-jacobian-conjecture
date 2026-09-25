@@ -30,6 +30,6 @@ The conjecture is about ℂⁿ, and Lean core has no complex numbers. The step f
 
 The `#print axioms` lines at the end of `KellerCE.lean` are for a reader in an editor; the gate does not use them. `check_lean.py` sets `LEAN_SYSROOT` to the pinned toolchain when it runs `leanchecker` and the probe from a temporary directory. Without it they would use elan's default toolchain, which can be a different Lean version that cannot read the compiled module.
 
-In the logged run, at a load average of 6.2 on 11 CPUs, compiling took 6.8 s, the kernel replay 2.9 s and the probe 5.2 s.
+In the logged run, at a load average of 5.0 on 11 CPUs, compiling took 6.6 s, the kernel replay 2.8 s and the probe 5.6 s.
 
 Compiling a Lean file runs code on the host with the user's permissions, and nothing here isolates it. `KellerCE.lean` has no imports and no meta code: no `#eval`, `macro`, `syntax`, `elab` or `notation`. Read any changed version before compiling it.

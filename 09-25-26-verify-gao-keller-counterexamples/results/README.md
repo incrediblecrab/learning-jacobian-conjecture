@@ -1,6 +1,6 @@
 # Logs of the last run
 
-These files are the output of the last full run of the three gates and the harness, on September 25, 2026 from 16:49 to 16:53 EDT. The [repository README](../../README.md#runtimes) tabulates their results and runtimes. From the folder above, each script ran as
+These files are the output of the last full run of the three gates and the harness, on September 25, 2026 from 18:09 to 18:12 EDT. The [repository README](../../README.md#runtimes) tabulates their results and runtimes. From the folder above, each script ran as
 
 ```
 export PYTHONDONTWRITEBYTECODE=1

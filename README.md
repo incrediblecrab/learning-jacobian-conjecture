@@ -34,7 +34,7 @@ A fiber is counted through the paper's construction. Over a target whose compone
 
 ## Finding: a discriminant normalization in Appendix A.2
 
-Appendix A.2 states disc_w(W) = −E/64. With the standard discriminant, the convention of the paper's own Section 2 computation disc_w(w³ − 2w² + Xw − 2Y) = −4E, the value is −E/16. The printed −E/64 is the resultant Res_w(W, ∂W/∂w), that is, the discriminant without the division by the leading coefficient lc(W) = 1/4. The neighboring Res_w(W, X − p(w)) = −E/64 is correct as printed. The argument uses only the zero set E = 0, which is the same either way. Gate A checks both values and reports the difference as a NOTE, not a failure.
+Appendix A.2 states disc_w(W) = −E/64, but the standard discriminant gives −E/16. The printed −E/64 is the resultant Res_w(W, ∂W/∂w), that is, the discriminant without the division by the leading coefficient lc(W) = 1/4. The paper itself uses the standard discriminant, (−1)^(n(n−1)/2) Res(f, f′)/lc(f) for f of degree n: its Theorem 3.4 value disc_x(h₁) = −c₃a₂², for the elimination cubic h₁ = c₃x³ + (4 − 3v₂v₃)x − 2v₃, is the standard one, and without the division by lc(h₁) = c₃ it would be −c₃²a₂². The Section 2 value disc_w(w³ − 2w² + Xw − 2Y) = −4E agrees as well, but that cubic is monic, so it cannot show the division. The neighboring Res_w(W, X − p(w)) = −E/64 is correct as printed. The argument uses only the zero set E = 0, which is the same either way. Gate A checks each of these values and reports the difference as a NOTE, not a failure.
 
 ## What was not checked
 
@@ -54,16 +54,16 @@ The defects change a coefficient in a recipe, in a transcribed formula of the pa
 
 ## Runtimes
 
-Measured on September 25, 2026 on an 11-core arm64 Mac shared with other jobs, at a load average of 6 to 9.
+Measured on September 25, 2026 on an 11-core arm64 Mac shared with other jobs, at a load average of 5 to 12.
 
 | Run | Result | real | user |
 |---|---|---|---|
-| Gate A, `verify_exact.py` | 153 passed, 0 failed, 1 note | 53.3 s | 52.5 s |
-| Gate B, `verify_modp.py` | 103 passed, 0 failed | 2.0 s | 2.0 s |
-| Gate L, `check_lean.py` | 27 passed, 0 failed | 15.6 s | 9.2 s |
-| `plant_defects.py` | 40 of 40 gate runs caught their defect | 129.4 s | 254.5 s |
+| Gate A, `verify_exact.py` | 153 passed, 0 failed, 1 note | 51.1 s | 50.2 s |
+| Gate B, `verify_modp.py` | 103 passed, 0 failed | 2.2 s | 2.1 s |
+| Gate L, `check_lean.py` | 27 passed, 0 failed | 15.7 s | 8.2 s |
+| `plant_defects.py` | 40 of 40 gate runs caught their defect | 137.3 s | 256.3 s |
 
-F7, whose components have up to 25,518 terms, takes 51.1 s of gate A's time. Load matters: an earlier run the same day, at a load average of 22 to 28 and with the same results, took 241.6 s real and 88.6 s user for gate A, 68.9 s real for gate L and 268.2 s real for the harness; its logs were not kept. The logs of the last run are in [results/](09-25-26-verify-gao-keller-counterexamples/results/).
+F7, whose components have up to 25,518 terms, takes 49.2 s of gate A's time. Load matters: an earlier run the same day, at a load average of 22 to 28 and with the same results, took 241.6 s real and 88.6 s user for gate A, 68.9 s real for gate L and 268.2 s real for the harness; its logs were not kept. The logs of the last run are in [results/](09-25-26-verify-gao-keller-counterexamples/results/).
 
 ## How to run
 

@@ -1,13 +1,13 @@
-INFO  L   Python 3.14.7, sympy 1.14.0 (only to compare Lean's F and G with the paper); load average 6.2 on 11 CPUs
+INFO  L   Python 3.14.7, sympy 1.14.0 (only to compare Lean's F and G with the paper); load average 5.0 on 11 CPUs
 PASS  L   lean is available (elan)
 INFO  L   toolchain pinned in lean/lean-toolchain: leanprover/lean4:v4.34.0; Lean (version 4.34.0, arm64-apple-darwin24.6.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
-INFO  L   lean KellerCE.lean: exit 0 in 6.8 s
+INFO  L   lean KellerCE.lean: exit 0 in 6.6 s
 PASS  L   lean KellerCE.lean exits 0 with no errors
 PASS  L   no `sorry` anywhere in the output
 PASS  L   leanchecker ships with the pinned toolchain
-INFO  L   leanchecker KellerCE: exit 0 in 2.9 s
+INFO  L   leanchecker KellerCE: exit 0 in 2.8 s
 PASS  L   kernel replay: leanchecker, in a separate process, re-checks every declaration of KellerCE in the kernel and accepts them all
-INFO  L   lean --run check_lean_probe.lean: exit 0 in 5.2 s
+INFO  L   lean --run check_lean_probe.lean: exit 0 in 5.6 s
 PASS  L   F_keller: axioms ['Classical.choice', 'Quot.sound', 'propext'] are among propext, Classical.choice, Quot.sound (read by the probe from the compiled module)
 PASS  L   G_keller: axioms ['Classical.choice', 'Quot.sound', 'propext'] are among propext, Classical.choice, Quot.sound (read by the probe from the compiled module)
 PASS  L   F_collision: axioms ['Classical.choice', 'Quot.sound', 'propext'] are among propext, Classical.choice, Quot.sound (read by the probe from the compiled module)
@@ -31,6 +31,6 @@ PASS  L   G_counterexample states: det J(G) = 2 on Q^3, and G is not injective o
 PASS  L   G_collision states the 3 points and the image of recipes.py
 PASS  L   G_not_injective uses the first two of those points
 SUMMARY  27 passed, 0 failed; 15 s
-real 15.57
-user 9.16
-sys 1.89
+real 15.71
+user 8.20
+sys 1.93

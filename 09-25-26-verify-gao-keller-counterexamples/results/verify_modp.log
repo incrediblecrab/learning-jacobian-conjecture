@@ -1,4 +1,4 @@
-INFO  env Python 3.14.7; standard library only; load average 6.2 on 11 CPUs
+INFO  env Python 3.14.7; standard library only; load average 5.0 on 11 CPUs
 INFO  F   === Alpoge's map F (Section 3.4) ===
 PASS  F   det J_(gamma,w)(S) = 2 gamma^1 as a polynomial identity mod p
 PASS  F   sum m = sum e = sum d + k + 1
@@ -111,7 +111,7 @@ PASS  F7  gradients of E_2..E_4 at the base point equal the paper's
 PASS  F7  stage Jacobian determinant is the constant 119377 (polynomial identity mod p)
 PASS  F7  claimed det 119377 = sign +1 * c 1 * det L 119377
 PASS  F7  every component is a polynomial (no negative power of x after the twist)
-INFO  F7  rebuilt mod p in 0.5 s; term counts [7, 14445, 17727, 21410, 25518]
+INFO  F7  rebuilt mod p in 0.6 s; term counts [7, 14445, 17727, 21410, 25518]
 PASS  F7  component degrees [7, 86, 89, 92, 95]  [got [7, 86, 89, 92, 95]]
 PASS  F7  term counts stated by the paper (component 1: 7)
 PASS  F7  components 2..5 have between 14000 and 26000 terms
@@ -119,8 +119,8 @@ PASS  F7  component 1 equals the printed F_{7,1} term by term mod p  [7 terms]
 PASS  F7  det J(F7) = 119377 at 3 random points of GF(p)^5  [1.0 s]
 PASS  F7  A's fingerprint for this map is present and uses p = 2^61 - 1
 PASS  F7  B's rebuild agrees with A's at A's 3 fingerprint points, and term counts agree
-INFO  F7  done in 1.8 s
+INFO  F7  done in 2.0 s
 SUMMARY (B)  103 passed, 0 failed
-real 2.00
-user 1.96
-sys 0.02
+real 2.19
+user 2.11
+sys 0.03
