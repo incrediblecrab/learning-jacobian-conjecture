@@ -86,7 +86,7 @@ Each gate prints one PASS or FAIL line per check and exits 0 only if every check
 
 ## Source and license of the paper
 
-The paper is by Shuhong Gao and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (DOI [10.48550/arXiv.2608.00222](https://doi.org/10.48550/arXiv.2608.00222)). Its PDF, as the repository's owner supplied it, and its LaTeX source, from arXiv's source archive for v1, are included unmodified:
+The paper is by Shuhong Gao and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (DOI [10.48550/arXiv.2608.00222](https://doi.org/10.48550/arXiv.2608.00222)). Its PDF and its LaTeX source are included unmodified. The PDF is byte-identical to the file arXiv served for v1 on September 25, 2026, and the LaTeX source comes from arXiv's source archive for v1:
 
 - `2608.00222v1.pdf`, SHA-256 `483208235e32ae69aaf83832916451707c78aa5a4410486c860950bd3eb6860f`
 - `09-25-26-verify-gao-keller-counterexamples/source/Jacobian_CE.tex`, SHA-256 `c644040df10323c69de0b022986ee98563f659e70a53afd4a0c74c03d55d81aa`
