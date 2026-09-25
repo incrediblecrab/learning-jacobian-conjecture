@@ -84,6 +84,10 @@ Each gate prints one PASS or FAIL line per check and exits 0 only if every check
 - `2608.00222v1.pdf`: the paper.
 - [`09-25-26-verify-gao-keller-counterexamples/`](09-25-26-verify-gao-keller-counterexamples/): the gates, the Lean proof, the paper's LaTeX source and the logs.
 
+## License
+
+The code and documentation of this repository are released under the [MIT License](LICENSE). The paper's two files are not covered: `2608.00222v1.pdf` and `09-25-26-verify-gao-keller-counterexamples/source/Jacobian_CE.tex` are Shuhong Gao's work and remain under CC BY 4.0, as the [next section](#source-and-license-of-the-paper) records.
+
 ## Source and license of the paper
 
 The paper is by Shuhong Gao and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (DOI [10.48550/arXiv.2608.00222](https://doi.org/10.48550/arXiv.2608.00222)). Its PDF and its LaTeX source are included unmodified. The PDF is byte-identical to the file arXiv served for v1 on September 25, 2026, and the LaTeX source comes from arXiv's source archive for v1:
