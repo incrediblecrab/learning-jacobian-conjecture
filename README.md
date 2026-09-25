@@ -63,7 +63,7 @@ Measured on September 25, 2026 on an 11-core arm64 Mac shared with other jobs, a
 | Gate L, `check_lean.py` | 27 passed, 0 failed | 15.6 s | 9.2 s |
 | `plant_defects.py` | 40 of 40 gate runs caught their defect | 129.4 s | 254.5 s |
 
-F7, whose components have up to 25,518 terms, takes 51.1 s of gate A's time. Load matters: an earlier run the same day, at a load average of 22 to 28 and with the same results, took 241.6 s real and 88.6 s user for gate A, 68.9 s real for gate L and 268.2 s real for the harness. The logs of the last run are in [results/](09-25-26-verify-gao-keller-counterexamples/results/).
+F7, whose components have up to 25,518 terms, takes 51.1 s of gate A's time. Load matters: an earlier run the same day, at a load average of 22 to 28 and with the same results, took 241.6 s real and 88.6 s user for gate A, 68.9 s real for gate L and 268.2 s real for the harness; its logs were not kept. The logs of the last run are in [results/](09-25-26-verify-gao-keller-counterexamples/results/).
 
 ## How to run
 
