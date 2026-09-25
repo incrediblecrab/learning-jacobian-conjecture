@@ -1,0 +1,179 @@
+INFO  env Python 3.14.7, sympy 1.14.0, mpmath 1.3.0; load average 7.2 on 11 CPUs
+PASS  src LaTeX source sha256 c644040df103... matches recipes.TEX_SHA256
+INFO  F   === Alpoge's map F (Section 3.4) ===
+PASS  F   det J_(gamma,w)(S) = 2*gamma^1, i.e. det J(F0) = 2*gamma^2 (symbolic)  [got 2*g]
+PASS  F   discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=3, sum e=3, sum d+k+1=3]
+PASS  F   E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  F   stage Jacobian determinant is the constant 1 (symbolic)  [got 1]
+PASS  F   stage: correction vectors lie in the span of the columns outside J=[] (Lemma 4.1)
+PASS  F   stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  F   polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  F   built in 0.0 s; term counts [7, 6, 3]
+PASS  F   component degrees [7, 6, 4]  [got [7, 6, 4]]
+PASS  F   component 1 equals the paper's printed f_1 (7 terms)  [0 differing terms]
+PASS  F   component 2 equals the paper's printed f_2 (6 terms)  [0 differing terms]
+PASS  F   component 3 equals the paper's printed f_3 (3 terms)  [0 differing terms]
+PASS  F   chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = -2  [sign -1 * c 2 * detL 1 = -2]
+PASS  F   det J(F) = -2 by full symbolic expansion of the explicit polynomials  [0.0 s]
+PASS  F   det J(F) = -2 at 3 random rational points (exact arithmetic)  [0.0 s]
+PASS  F   fiber over random target: Groebner basis in shape form, R(w1) of degree 3, 3 roots with gamma != 0, all simple  [expected 3 points]
+PASS  F     R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F     lifted 3 roots to distinct source points; max relative residual |F(p) - target| = 1.32e-81
+PASS  F   fiber over cusp preimage t=1 (curve C, empty fiber): Groebner basis in shape form, R(w1) of degree 3, 0 roots with gamma != 0, all simple  [expected 0 points]
+PASS  F     R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F   F(0, 0, -1/4) = (-1/4, 0, 0) over Q  [got (-1/4, 0, 0)]
+PASS  F   F(1, -3/2, 13/2) = (-1/4, 0, 0) over Q  [got (-1/4, 0, 0)]
+PASS  F   F(-1, 3/2, 13/2) = (-1/4, 0, 0) over Q  [got (-1/4, 0, 0)]
+PASS  F   these 3 points are pairwise distinct, so F is not injective
+PASS  F   Sec. 2: disc_w(w^3 - 2w^2 + Xw - 2Y) = -4E(X,Y) (standard discriminant)
+PASS  F   Thm 3.4: h_1 = c_3 x^3 + (4 - 3 v2 v3) x - 2 v3 and a_2 = dc_3/dv_1
+PASS  F   Thm 3.4(1): disc_x(h_1) = -c_3 a_2^2 and a_2^2 - 4(4 - 3 v2 v3)^3 = 108 v3^2 c_3
+PASS  F   Thm 3.4(2): v3^2 c_3 = E(sigma(v))
+PASS  F   App. A.1: each h_i vanishes on the graph, h_i(x,y,z,F) = 0
+PASS  F   App. A.1: each f_i - v_i reduces to 0 modulo {h_1..h_6}
+PASS  F   App. A.1: {h_1..h_6} is a Groebner basis (all 15 S-polynomials reduce to 0), lex z>y>x>v1>v2>v3
+PASS  F   App. A.1: leading coefficients 27,54,6,24,4,8 and the monic basis is reduced  [[27, 54, 6, 24, 4, 8]]
+INFO  F   done in 0.1 s
+INFO  G   === The degree-four map G (Section 3.5) ===
+PASS  G   det J_(gamma,w)(S) = 2*gamma^1, i.e. det J(F0) = 2*gamma^2 (symbolic)  [got 2*g]
+PASS  G   discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=3, sum e=3, sum d+k+1=3]
+PASS  G   E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  G   stage Jacobian determinant is the constant 1 (symbolic)  [got 1]
+PASS  G   stage: correction vectors lie in the span of the columns outside J=[] (Lemma 4.1)
+PASS  G   stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  G   polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  G   built in 0.0 s; term counts [3, 14, 16]
+PASS  G   component degrees [4, 11, 12]  [got [4, 11, 12]]
+PASS  G   component 1 equals the paper's printed g_1 (3 terms)  [0 differing terms]
+PASS  G   component 2 equals the paper's printed g_2 (14 terms)  [0 differing terms]
+PASS  G   component 3 equals the paper's printed g_3 (16 terms)  [0 differing terms]
+PASS  G   chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = 2  [sign +1 * c 2 * detL 1 = 2]
+PASS  G   det J(G) = 2 by full symbolic expansion of the explicit polynomials  [0.0 s]
+PASS  G   det J(G) = 2 at 3 random rational points (exact arithmetic)  [0.0 s]
+PASS  G   fiber over random target: Groebner basis in shape form, R(w1) of degree 4, 4 roots with gamma != 0, all simple  [expected 4 points]
+PASS  G     R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  G     lifted 4 roots to distinct source points; max relative residual |G(p) - target| = 5.19e-82
+PASS  G   fiber over node (X,Y)=(-4,1/2) (empty fiber): Groebner basis in shape form, R(w1) of degree 4, 0 roots with gamma != 0, all simple  [expected 0 points]
+PASS  G     R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  G   App. A.2: Res_w(W, X - p(w)) = -E/64
+PASS  G   App. A.2: standard disc_w(W) = -E/16 and Res_w(W, dW/dw) = -E/64 (lc(W) = 1/4)  [disc/E = -1/16, Res(W,W')/E = -1/64]
+NOTE  G   App. A.2 prints disc_w(W) = -E/64. With the standard discriminant, the convention of the paper's own disc_w(w^3-2w^2+Xw-2Y) = -4E, it is -E/16; -E/64 is Res_w(W, dW/dw), i.e. no division by lc(W) = 1/4. The zero locus E = 0, which is what the argument uses, is unaffected.
+PASS  G   App. A.2: at the node (X,Y) = (-4, 1/2), W = (w^2 - 4w - 2)^2 / 4
+PASS  G   App. A.2: G(0, 1/2, -1/4) = (0, 1, 1)
+PASS  G   G(0, 1/2, -9/4) = (0, 1, 0) over Q  [got (0, 1, 0)]
+PASS  G   G(2, -1/2, 3/2) = (0, 1, 0) over Q  [got (0, 1, 0)]
+PASS  G   G(-2, 5/6, 13/6) = (0, 1, 0) over Q  [got (0, 1, 0)]
+PASS  G   these 3 points are pairwise distinct, so G is not injective
+PASS  G   Thm A.1, case v_1 = 0: the collision is the point (0, v_2/2, z*) on x = 0 and two points with gamma = 2 - 4xy - x^2 z = 0 and x^2 = 4/(v_2^2 - 24 v_3)
+PASS  G   Thm A.1: x = v1/gamma, y = (w-gamma)/v1, z = gamma(6gamma-4w-gamma^2)/v1^2 give G = v modulo W (symbolic)
+INFO  G   done in 0.8 s
+INFO  F4  === F_4 (Section 4.4.1, Specialization I) ===
+PASS  F4  det J_(gamma,w)(S) = 2*gamma^1, i.e. det J(F0) = 2*gamma^2 (symbolic)  [got 2*g]
+PASS  F4  discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=4, sum e=4, sum d+k+1=4]
+PASS  F4  E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  F4  stage Jacobian determinant is the constant -22/9 (symbolic)  [got -22/9]
+PASS  F4  stage: correction vectors lie in the span of the columns outside J=[] (Lemma 4.1)
+PASS  F4  stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  F4  polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  F4  built in 0.0 s; term counts [3, 32, 39, 114]
+PASS  F4  component degrees [4, 11, 12, 21]  [got [4, 11, 12, 21]]
+PASS  F4  component 1 equals the paper's printed F_{4,1} (3 terms)  [0 differing terms]
+PASS  F4  component 2 equals the paper's printed F_{4,2} (32 terms)  [0 differing terms]
+PASS  F4  component 3 equals the paper's printed F_{4,3} (39 terms)  [0 differing terms]
+PASS  F4  component 4 equals the paper's printed F_{4,4} (114 terms)  [0 differing terms]
+PASS  F4  chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = -44/9  [sign +1 * c 2 * detL -22/9 = -44/9]
+PASS  F4  det J(F4) = -44/9 by full symbolic expansion of the explicit polynomials  [0.1 s]
+PASS  F4  det J(F4) = -44/9 at 3 random rational points (exact arithmetic)  [0.0 s]
+PASS  F4  fiber over paper witness v=(2/3,-1/5,1/2,3): Groebner basis in shape form, R(w1) of degree 5, 5 roots with gamma != 0, all simple  [expected 5 points]
+PASS  F4    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F4    lifted 5 roots to distinct source points; max relative residual |F4(p) - target| = 1.1e-81
+PASS  F4  fiber over random target: Groebner basis in shape form, R(w1) of degree 5, 5 roots with gamma != 0, all simple  [expected 5 points]
+PASS  F4    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F4    lifted 5 roots to distinct source points; max relative residual |F4(p) - target| = 1.14e-81
+INFO  F4  done in 0.2 s
+INFO  F5  === F_5 (Section 4.4.2, Specialization II) ===
+PASS  F5  sweep X_1 equals the paper's display
+PASS  F5  sweep X_2 equals the paper's display
+PASS  F5  sweep X_3 equals the paper's display
+PASS  F5  det J_(gamma,w)(S) = 1*gamma^2, i.e. det J(F0) = 1*gamma^3 (symbolic)  [got g**2]
+PASS  F5  discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=6, sum e=6, sum d+k+1=6]
+PASS  F5  E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  F5  stage Jacobian determinant is the constant 160/29 (symbolic)  [got 160/29]
+PASS  F5  stage: correction vectors lie in the span of the columns outside J=[1] (Lemma 4.1)
+PASS  F5  stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  F5  polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  F5  built in 0.0 s; term counts [2, 24, 34, 54]
+PASS  F5  component degrees [3, 12, 14, 16]  [got [3, 12, 14, 16]]
+PASS  F5  component 1 equals the paper's printed F_{5,1} (2 terms)  [0 differing terms]
+PASS  F5  component 2 equals the paper's printed F_{5,2} (24 terms)  [0 differing terms]
+PASS  F5  component 3 equals the paper's printed F_{5,3} (34 terms)  [0 differing terms]
+PASS  F5  component 4 equals the paper's printed F_{5,4} (54 terms)  [0 differing terms]
+PASS  F5  chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = 160/29  [sign +1 * c 1 * detL 160/29 = 160/29]
+PASS  F5  det J(F5) = 160/29 by full symbolic expansion of the explicit polynomials  [0.0 s]
+PASS  F5  det J(F5) = 160/29 at 3 random rational points (exact arithmetic)  [0.0 s]
+PASS  F5  fiber over paper witness v=(1/2,2/3,-1/3,1): Groebner basis in shape form, R(w1) of degree 10, 10 roots with gamma != 0, all simple  [expected 10 points]
+PASS  F5    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F5    lifted 10 roots to distinct source points; max relative residual |F5(p) - target| = 1.98e-81
+PASS  F5  fiber over random target: Groebner basis in shape form, R(w1) of degree 10, 10 roots with gamma != 0, all simple  [expected 10 points]
+PASS  F5    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F5    lifted 10 roots to distinct source points; max relative residual |F5(p) - target| = 2.31e-81
+INFO  F5  done in 0.2 s
+INFO  F6  === F_6 (Section 4.5.1, bottom branch) ===
+INFO  F6  sweep X from potentials: X_1 = -det J(G)/c, X_(i+1) = G_(i+1) + Delta_(i+1) X_1; degrees [5, 6, 7, 6]
+PASS  F6  sweep X_1 equals the paper's display
+PASS  F6  sweep X_2 equals the paper's display
+PASS  F6  sweep X_3 equals the paper's display
+PASS  F6  sweep X_4 equals the paper's display
+PASS  F6  det J_(gamma,w)(S) = 1*gamma^1, i.e. det J(F0) = 1*gamma^2 (symbolic)  [got g]
+PASS  F6  discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=10, sum e=10, sum d+k+1=10]
+PASS  F6  E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  F6  base point ['1', '1', '0', '0']: E_i(base) = 0 for all i
+PASS  F6  gradients of E_2, E_3, E_4 at the base point match the paper  [[[-16, -17, 3, 2], [-17, -18, 5, 3], [-2, -2, 0, 1]]]
+PASS  F6  stage Jacobian determinant is the constant -290 (symbolic)  [got -290]
+PASS  F6  stage: correction vectors lie in the span of the columns outside J=[1, 2] (Lemma 4.1)
+PASS  F6  stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  F6  polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  F6  built in 0.0 s; term counts [6, 342, 421, 507, 904]
+PASS  F6  component degrees [7, 38, 40, 42, 44]  [got [7, 38, 40, 42, 44]]
+PASS  F6  term counts stated by the paper (component 1: 6, component 2: 342, component 3: 421, component 4: 507, component 5: 904)  [got [6, 342, 421, 507, 904]]
+PASS  F6  component 1 equals the paper's printed F_{6,1} (6 terms)  [0 differing terms]
+PASS  F6  chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = -290  [sign +1 * c 1 * detL -290 = -290]
+PASS  F6  det J(F6) = -290 at 3 random rational points (exact arithmetic)  [0.1 s]
+PASS  F6  fiber over random target: Groebner basis in shape form, R(w1) of degree 6, 6 roots with gamma != 0, all simple  [expected 6 points]
+PASS  F6    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F6    lifted 6 roots to distinct source points; max relative residual |F6(p) - target| = 3.41e-81
+PASS  F6  fiber over axis (C0,0,0,0,0): Groebner basis in shape form, R(w1) of degree 6, 4 roots with gamma != 0, all simple  [expected 4 points]
+PASS  F6  axis: R_0 equals the paper's factored form up to a constant
+PASS  F6    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F6    lifted 4 roots to distinct source points; max relative residual |F6(p) - target| = 1.41e-79
+INFO  F6  done in 0.5 s
+INFO  F7  === F_7 (Section 4.6, curve-type family) ===
+INFO  F7  sweep X from potentials: X_1 = -det J(G)/c, X_(i+1) = G_(i+1) + Delta_(i+1) X_1; degrees [7, 8, 9, 10]
+PASS  F7  det J_(gamma,w)(S) = 1*gamma^1, i.e. det J(F0) = 1*gamma^2 (symbolic)  [got g]
+PASS  F7  discrete data: wt(X_i) >= e_i, 1 + wt(Delta_i) >= e_i, sum m = sum e = sum d + k + 1  [sum m=10, sum e=10, sum d+k+1=10]
+PASS  F7  E_i = S_i(gamma, gamma^d u)/gamma^e_i is a polynomial in (gamma, u)
+PASS  F7  base point ['1', '1', '0', '-1']: E_i(base) = 0 for all i
+PASS  F7  gradients of E_2, E_3, E_4 at the base point match the paper  [[[-15, 0, -3, 4], [-20, 3, -1, 6], [-19, 8, -1, 7]]]
+PASS  F7  stage Jacobian determinant is the constant 119377 (symbolic)  [got 119377]
+PASS  F7  stage: correction vectors lie in the span of the columns outside J=[1, 2] (Lemma 4.1)
+PASS  F7  stage is a polynomial automorphism: explicit inverse, both compositions = identity (symbolic)
+PASS  F7  polynomial map: x^e_i divides E_i(stage(v)) for every i (exact)  [0 monomials of low x-degree]
+INFO  F7  built in 7.7 s; term counts [7, 14445, 17727, 21410, 25518]
+PASS  F7  component degrees [7, 86, 89, 92, 95]  [got [7, 86, 89, 92, 95]]
+PASS  F7  term counts stated by the paper (component 1: 7)  [got [7, 14445, 17727, 21410, 25518]]
+PASS  F7  components 2..5 have between 14000 and 26000 terms  [got [14445, 17727, 21410, 25518]]
+PASS  F7  component 1 equals the paper's printed F_{7,1} (7 terms)  [0 differing terms]
+PASS  F7  chain factorization x^(sum m) * detL * gamma^(sum d) * c gamma^(k+1) * (gamma x)^(-sum e) = 119377  [sign +1 * c 1 * detL 119377 = 119377]
+PASS  F7  det J(F7) = 119377 at 3 random rational points (exact arithmetic)  [17.2 s]
+PASS  F7  fiber over paper witness Y=(1,2,-1,3): Groebner basis in shape form, R(w1) of degree 12, 12 roots with gamma != 0, all simple  [expected 12 points]
+PASS  F7    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F7    lifted 12 roots to distinct source points; max relative residual |F7(p) - target| = 5.2e-81
+PASS  F7  fiber over axis (C0,0,0,0,0): Groebner basis in shape form, R(w1) of degree 12, 7 roots with gamma != 0, all simple  [expected 7 points]
+PASS  F7  axis: R_0 equals the paper's factored form up to a constant
+PASS  F7    R(w1) equals the paper's fiber polynomial at this target, up to a constant factor
+PASS  F7    lifted 7 roots to distinct source points; max relative residual |F7(p) - target| = 9.36e-81
+INFO  F7  done in 51.1 s
+SUMMARY  153 passed, 0 failed, 1 notes on the paper's text
+real 53.27
+user 52.53
+sys 0.17

@@ -1,0 +1,3 @@
+# recipes.py pins the SHA-256 of the paper's LaTeX source, so git must keep its bytes exactly.
+09-25-26-verify-gao-keller-counterexamples/source/Jacobian_CE.tex -text
+*.pdf binary
