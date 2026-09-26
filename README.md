@@ -1,10 +1,17 @@
-# Checking Gao's counterexamples to the Jacobian conjecture
+# learning-jacobian-conjecture
 
-The Jacobian conjecture says that a polynomial map ℂⁿ → ℂⁿ whose Jacobian determinant is a nonzero constant, a Keller map, has a polynomial inverse; in particular it is injective. Shuhong Gao's preprint *Counterexamples to the Jacobian conjecture in dimensions greater than two* ([arXiv:2608.00222v1](https://arxiv.org/abs/2608.00222v1), July 31, 2026) treats six explicit Keller maps that are not injective, in dimensions three, four and five: Alpöge's map F and five new ones. This repository rebuilds all six from the recipes in the paper and checks what the paper says about them.
+This repository checks the six explicit Keller maps in Shuhong Gao's July 31, 2026 preprint, *Counterexamples to the Jacobian conjecture in dimensions greater than two*. It is a public research repository, not a package, and it reports the checked instances without claiming the paper's general construction was verified.
 
-**Result.** Each rebuilt map is polynomial, has the constant Jacobian determinant the paper states, and has a fiber of several points, so each is a counterexample to the Jacobian conjecture. The rebuilt maps agree with every component the paper prints. One formula in Appendix A.2 is off by a factor of 4, a discriminant normalization that does not affect the argument. For the two three-dimensional maps, Alpöge's F and Gao's G, a Lean 4 proof accepted by the kernel shows that each is a Keller map and is not injective on ℚ³.
+**Objective:** rebuild Gao's six maps from the paper, verify their stated Keller and non-injectivity properties, and record exactly which claims were machine-checked.
 
-**Limits.** Only the six explicit maps were checked, not the paper's general construction or its general theorems. Apart from F and G in Lean, the evidence is exact computer algebra in sympy, which is as trustworthy as sympy and this code, backed by independent sampled checks. The generic fiber size, the geometric degree, was not proved for any map. [What was not checked](#what-was-not-checked) has the full list.
+**Inputs:** Gao's arXiv v1 PDF and source, Python 3 with sympy and mpmath for the exact gate, Python 3 alone for the modular gate, and elan for the Lean 4 proof of the two three-dimensional maps.
+
+**Files:**
+
+- [`09-25-26-verify-gao-keller-counterexamples/`](09-25-26-verify-gao-keller-counterexamples/README.md): the gates, Lean proof, paper source and logs
+- [`2608.00222v1.pdf`](2608.00222v1.pdf): Gao's arXiv v1 PDF, included unmodified
+
+**Try it:** `cd 09-25-26-verify-gao-keller-counterexamples && python3 verify_modp.py --no-cross` runs the standard-library modular gate without rewriting fingerprints.
 
 ## The six maps
 
@@ -79,16 +86,7 @@ python3 plant_defects.py   # planted defects; runs A, B and L many times
 
 Each gate prints one PASS or FAIL line per check and exits 0 only if every check passes. `plant_defects.py` exits 0 only if the control run is clean and every planted defect is caught. B reads the fingerprint file that A writes to `results/`, so run A first. [The folder's README](09-25-26-verify-gao-keller-counterexamples/README.md) lists the options, such as `--maps F,G` to check only some maps.
 
-## Layout
-
-- `2608.00222v1.pdf`: the paper.
-- [`09-25-26-verify-gao-keller-counterexamples/`](09-25-26-verify-gao-keller-counterexamples/): the gates, the Lean proof, the paper's LaTeX source and the logs.
-
-## License
-
-The code and documentation of this repository are released under the [MIT License](LICENSE). The paper's two files are not covered: `2608.00222v1.pdf` and `09-25-26-verify-gao-keller-counterexamples/source/Jacobian_CE.tex` are Shuhong Gao's work and remain under CC BY 4.0, as the [next section](#source-and-license-of-the-paper) records.
-
-## Source and license of the paper
+## Source of the paper
 
 The paper is by Shuhong Gao and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (DOI [10.48550/arXiv.2608.00222](https://doi.org/10.48550/arXiv.2608.00222)). Its PDF and its LaTeX source are included unmodified. The PDF is byte-identical to the file arXiv served for v1 on September 25, 2026, and the LaTeX source comes from arXiv's source archive for v1:
 
@@ -108,3 +106,7 @@ What did not work at first:
 - The planted-defect harness first counted any nonzero exit as a catch, so a crash would have passed for a caught defect. It now also requires a FAIL line.
 - Gate L first read the axioms from the Lean file's own `#print axioms` output, which misses two attacks: meta code in the file can add a declaration with the kernel check switched off, and a macro can fake the `#print axioms` output. The second came to light only on re-reading a formal-proof checklist. With a planted macro, the file's own output listed only the standard axioms, while the probe found the added one. The gate now replays the compiled module in the kernel and reads the axioms with a separate probe.
 - The collision for G came from a search. It was matched to the paper's Theorem A.1 only afterwards.
+
+## License
+
+MIT. See [`LICENSE`](LICENSE). It covers this repository's own code and documentation. The paper's two files are not covered: `2608.00222v1.pdf` and `09-25-26-verify-gao-keller-counterexamples/source/Jacobian_CE.tex` are Shuhong Gao's work and remain under CC BY 4.0, as [Source of the paper](#source-of-the-paper) records.
